@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/photo_view"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:scaleType="centerCrop"
+            app:layout_constraintDimensionRatio="1:1.2"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/back_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#FFFFFF"
+            android:elevation="2dp"
+            android:layout_margin="12dp"
+            android:paddingHorizontal="12dp"
+            android:paddingVertical="4dp"
+            android:text="Закрыть"
+            android:textColor="#404040"
+            android:textSize="15sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+        <TextView
+            android:id="@+id/name_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Smartfon iphone 11"
+            android:textColor="#323232"
+            android:textSize="20sp"
+            android:layout_margin="12dp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/photo_view" />
+
+        <TextView
+            android:id="@+id/brand_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Apple"
+            android:textColor="?colorPrimaryVariant"
+            android:textSize="16sp"
+            android:layout_marginTop="8dp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/name_view"
+            app:layout_constraintTop_toBottomOf="@+id/name_view" />
+
+        <TextView
+            android:id="@+id/category"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Apples / Mobil telefon"
+            android:layout_marginStart="12dp"
+            android:textColor="@color/cardview_dark_background"
+            android:textSize="15sp"
+            app:layout_constraintStart_toEndOf="@+id/brand_view"
+            app:layout_constraintTop_toTopOf="@+id/brand_view" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/merchant"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="12dp"
+            android:elevation="1dp"
+            app:cardElevation="1dp"
+            android:layout_marginTop="12dp"
+            app:layout_constraintStart_toStartOf="@+id/brand_view"
+            app:layout_constraintTop_toBottomOf="@+id/brand_view">
+
+            <TextView
+                android:id="@+id/merchant_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="6dp"
+                android:text="Oybek qodirov"
+                android:textColor="@color/black"
+                android:textSize="15sp" />
+        </androidx.cardview.widget.CardView>
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:scrollbars="none"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/merchant"
+            app:layout_constraintTop_toBottomOf="@+id/merchant">
+
+            <LinearLayout
+                android:id="@+id/attributes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+            </LinearLayout>
+        </HorizontalScrollView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
